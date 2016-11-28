@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns="http://java.sun.com/xml/ns/javaee"
+xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+	<servlet>
+		<servlet-name>Test</servlet-name>
+		<servlet-class>com.example.myproject.TestServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Test</servlet-name>
+		<url-pattern>/test</url-pattern>
+	</servlet-mapping>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+	
+	<servlet>
+    <servlet-name>add_todo</servlet-name>
+    <servlet-class>com.example.myproject.AddToDoDataServlet</servlet-class>
+	</servlet>
+<servlet-mapping>
+    <servlet-name>add_todo</servlet-name>
+    <url-pattern>/add</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>edit_tododata</servlet-name>
+    <servlet-class>com.example.myproject.EditToDoDataServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>edit_tododata</servlet-name>
+    <url-pattern>/edit</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>find_data</servlet-name>
+    <servlet-class>com.example.myproject.FindDataServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>find_data</servlet-name>
+    <url-pattern>/find</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>del_data</servlet-name>
+    <servlet-class>com.example.myproject.DelToDoDataServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>del_data</servlet-name>
+    <url-pattern>/del</url-pattern>
+</servlet-mapping>
+</web-app>
+

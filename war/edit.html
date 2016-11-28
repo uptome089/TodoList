@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>ToDoObejctの更新</title>
+    <script type="text/javascript" src="lib.js"></script>
+        <script type="text/javascript">
+        <!--
+        function initial(){
+            var datas = getQuery();
+            getData(datas.id);
+        }
+         
+        function callback(request){
+            var arr = eval(request.responseText);
+            var data = arr[0];
+            document.getElementById("id").value = data.id;
+            document.getElementById("title").value = data.title;
+            document.getElementById("desc").value = data.desc;
+            document.getElementById("target").value = data.target;
+            document.getElementById("from_date").value = data.from_date;
+            document.getElementById("to_date").value = data.to_date;
+        }
+        //-->
+        </script>
+    </head>
+    <body onload="initial();">
+        <h1>データの更新</h1>
+        <table>
+        <form method="post" action="/edit">
+            <input type="hidden" id="id" name="id">
+				<tr><th>TITLE:</th><td><input type="text" name="title"></td></tr>
+	    	    <tr><th>DESC:</th><td><textarea name="desc"></textarea></td></tr>
+	    	    <tr><th>TARGET:</th><td><input type ="text" name = "target"></td></tr>
+        		<tr><th>FromDate:</th><td><input type ="text" name = "from_date"></td></tr>
+        		<tr><th>ToDate:</th><td><input type ="text" name = "to_date"></td></tr>
+        		<tr><th></th><td><input type="submit" value="追加"></td></tr>
+        </form>
+        </table>
+    </body>
+</html>

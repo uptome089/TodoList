@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE jdo PUBLIC
+    "-//Sun Microsystems, Inc.//DTD Java Data Objects Metadata 2.0//EN"
+    "http://java.sun.com/dtd/jdo_2_0.dtd">
+<jdo>
+    <package name="com.example.myproject">
+        <class
+              name="ToDoObject">
+            <field
+                  name="id"
+                  persistence-modifier="persistent"/>
+            <field
+                  name="title"
+                  persistence-modifier="persistent"/>
+            <field
+                  name="desc"
+                  persistence-modifier="persistent"/>
+            <field
+                  name="target"
+                  persistence-modifier="persistent"/>
+            <field
+                  name="from_date"
+                  persistence-modifier="persistent"/>
+            <field
+                  name="to_date"
+                  persistence-modifier="persistent"/>
+            <field
+                  name="isDone"
+                  persistence-modifier="persistent"/>
+        </class>
+    </package>
+</jdo>
